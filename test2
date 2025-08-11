@@ -1,0 +1,137 @@
+tripe\Checkout\Session Object
+(
+    [id] => cs_test_a1mLcsq2VB66HWKn6AptkrSrlEQpBTKlCCqrDtwP6DlMVjLmyoW0SeE4Y7
+    [object] => checkout.session
+    [after_expiration] => 
+    [allow_promotion_codes] => 
+    [amount_subtotal] => 1000
+    [amount_total] => 1000
+    [automatic_tax] => Stripe\StripeObject Object
+        (
+            [enabled] => 
+            [liability] => 
+            [status] => 
+        )
+
+    [billing_address_collection] => auto
+    [cancel_url] => https://stripe.com
+    [client_reference_id] => 
+    [client_secret] => 
+    [consent] => 
+    [consent_collection] => 
+    [created] => 1727110065
+    [currency] => usd
+    [currency_conversion] => 
+    [custom_fields] => Array
+        (
+        )
+
+    [custom_text] => Stripe\StripeObject Object
+        (
+            [after_submit] => 
+            [shipping_address] => 
+            [submit] => 
+            [terms_of_service_acceptance] => 
+        )
+
+    [customer] => 
+    [customer_creation] => if_required
+    [customer_details] => Stripe\StripeObject Object
+        (
+            [address] => Stripe\StripeObject Object
+                (
+                    [city] => 
+                    [country] => US
+                    [line1] => 
+                    [line2] => 
+                    [postal_code] => 12345
+                    [state] => 
+                )
+
+            [email] => angelegranadillo@gmail.com
+            [name] => Zhang san
+            [phone] => 
+            [tax_exempt] => none
+            [tax_ids] => Array
+                (
+                )
+
+        )
+
+    [customer_email] => 
+    [expires_at] => 1727196464
+    [invoice] => 
+    [invoice_creation] => Stripe\StripeObject Object
+        (
+            [enabled] => 
+            [invoice_data] => Stripe\StripeObject Object
+                (
+                    [account_tax_ids] => 
+                    [custom_fields] => 
+                    [description] => 
+                    [footer] => 
+                    [issuer] => 
+                    [metadata] => Stripe\StripeObject Object
+                        (
+                        )
+
+                    [rendering_options] => 
+                )
+
+        )
+
+    [livemode] => 
+    [locale] => auto
+    [metadata] => Stripe\StripeObject Object
+        (
+        )
+
+    [mode] => payment
+    [payment_intent] => pi_3Q2FRtAxMaD5AMhF1MYFWRvW
+    [payment_link] => plink_1Q2FQJAxMaD5AMhFalwHxJ4i
+    [payment_method_collection] => always
+    [payment_method_configuration_details] => 
+    [payment_method_options] => Stripe\StripeObject Object
+        (
+            [card] => Stripe\StripeObject Object
+                (
+                    [request_three_d_secure] => automatic
+                )
+
+        )
+
+    [payment_method_types] => Array
+        (
+            [0] => card
+        )
+
+    [payment_status] => paid
+    [phone_number_collection] => Stripe\StripeObject Object
+        (
+            [enabled] => 
+        )
+
+    [recovered_from] => 
+    [saved_payment_method_options] => 
+    [setup_intent] => 
+    [shipping_address_collection] => 
+    [shipping_cost] => 
+    [shipping_details] => 
+    [shipping_options] => Array
+        (
+        )
+
+    [status] => complete
+    [submit_type] => auto
+    [subscription] => 
+    [success_url] => http://localhost:5200/apipay.php?rq=STATUS&comprobante=64&session_id={CHECKOUT_SESSION_ID}
+    [total_details] => Stripe\StripeObject Object
+        (
+            [amount_discount] => 0
+            [amount_shipping] => 0
+            [amount_tax] => 0
+        )
+
+    [ui_mode] => hosted
+    [url] => 
+)

@@ -1,0 +1,148 @@
+/* The mc01p_Modal (background) */
+
+.mc01p_modal {
+	display: none; /* Hidden by default */
+	position: absolute; /* Stay in place */
+	z-index: 10200; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* mc01p_Modal Content/Box */
+.mc01p_modal-content {
+	min-height: 100px;
+    height: max-content;
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: fit-content;
+	border-radius: 6px;
+	z-index: 10;
+}
+.mc01p_modal-footer{
+	text-align: end;
+}
+@media screen and (max-width: 480px) {
+	.mc01p_modal-content{
+		width: 80% !important;
+	} 
+  }
+
+/* The mc01p_modal_close Button */
+.mc01p_modal_x {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.mc01p_modal-title {
+	color: black;
+	float: left;
+	font-size: 11px;
+}
+.mc01p_modal_x:hover,
+.mc01p_modal_x:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+.mc01p_modal-texto {
+	color: black;
+	height: 20%;
+	font-size: 18px;
+	padding-top: 25px;
+}
+.mc01p_modal-closed {
+	/* float: right; */
+	border-radius: 3px;
+	border: none;
+	background: rgb(5, 63, 102);
+	color: white;
+	height: 30px;
+	width: 68px;
+    font-size: 16px;
+}
+.mc01p_modal-closed:hover{
+	background: rgb(131, 163, 184);
+	color: black;
+}
+.mc01p_modal-btConfirm{
+	float: right;
+	border-radius: 3px;
+	border: none;
+	background: rgb(5, 63, 102);
+	color: white;
+	height: 30px;
+	width: 68px;
+    font-size: 16px;
+	margin-left: 17px;
+}
+.mc01p_modal-whatsapp{
+	display: none;
+	float: right;
+	border-radius: 3px;
+	border: none;
+	background: rgb(5, 102, 5);
+	color: white;
+	height: 30px;
+	width: 68px;
+    font-size: 16px;
+	margin-left: 17px;
+}
+.mc01p_modal-otherBtn{
+	background: rgb(153, 153, 153);
+	color: black;
+}
+.mc01p_modal-btConfirm:hover{
+	background: rgb(131, 163, 184);
+	color: black;
+}
+
+.mc01p_modal-small{
+    display: flex;
+}
+.mc01p_modal-boxPhone{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+}
+.mc01p_modal-boxphoneinput{
+	display: flex;
+	border: 1px solid rgb(176, 175, 175);
+    border-radius: 6px;
+    padding: 3px;
+}
+.mc01p_modal-flagphone{
+    border: none;
+    outline: none;
+    font-size: 30px;
+}
+.mc01p_modal-inputphone{
+    border: none;
+    padding-bottom: 6px;
+    outline: none;
+    font-size: 20px;
+}
+.mc01p_modal-lableinfo{
+	display: flex;
+    padding-top: 4px;
+    font-size: 20px;
+}
+.modalWhatSapp{
+	height: 150px;
+}
+.footerWhatSapp{
+	padding-top: 20px;
+	padding-right: 8px;
+}
+
+.mc01p_modal-btConfirm::first-letter{
+ text-decoration: underline;
+}

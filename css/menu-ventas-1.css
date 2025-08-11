@@ -1,0 +1,151 @@
+.menu-top-ventas {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.login-windows {
+  background: #4b79a1;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #283e51, #0f1d28);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #283e51,
+      #0f1d28);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none !important;
+  width: 95%;
+  height: 95%;
+  margin: auto !important;
+  margin-top: 5% !important;
+}
+
+.login-info {
+  background: #000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #232324, #0f1d28);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #232329,
+      #000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none !important;
+  width: 95%;
+  height: 95%;
+  margin: auto !important;
+  margin-top: 5% !important;
+}
+
+.logo-bg {
+  width: 30%;
+}
+
+.icons-transacc {
+  width: 200%;
+}
+
+/* @media (min-width : 320px) and (max-width : 480px)  { */
+/* @media only screen and (max-width : 900px) { */
+@media screen and (min-width: 480px) {
+  .login-windows {
+    width: 450px !important;
+    height: 550px !important;
+  }
+
+  .login-info {
+    width: 450px !important;
+    height: 550px !important;
+  }
+
+  .ticker-windows {
+    width: 270px !important;
+    height: 550px !important;
+  }
+
+  .report-windows {
+    width: 270px !important;
+    height: 550px !important;
+  }
+
+  .fmr-body-rr {
+    width: 300px !important;
+  }
+
+  .icons-transacc {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-bg {
+    width: 70%
+  }
+}
+
+.h3-responsive {
+  font-size: 4vw;
+}
+
+.btn-opacity {
+  opacity: 0.5;
+}
+
+.point-cursor {
+  cursor: pointer;
+}
+
+.from-wait {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.from-wait-content {
+  min-height: 100%;
+  background: transparent;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticker-windows {
+  background: #dddfe1;
+  /* fallback for old browsers */
+  border: none !important;
+  /* width: auto !important; */
+  margin: auto !important;
+}
+
+.btn-command-ticket {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fmr-body-rr {
+  width: 220px;
+}
+
+
+.report-windows {
+  background: #dddfe1;
+  /* fallback for old browsers */
+  border: none !important;
+  /* width: auto !important; */
+  margin: auto !important;
+}

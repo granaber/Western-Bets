@@ -1,0 +1,15 @@
+<?
+// ********** Creacion de archivo XML ************
+require('prc_php.php');
+$GLOBALS['link'] = Connection::getInstance();
+
+
+$vermenu = $_REQUEST['idmenu'];
+
+$sql = 'SELECT * FROM _tmenu where variable="' . $vermenu . '"';
+
+$resultj = mysqli_query($GLOBALS['link'], $sql);
+$Row = mysqli_fetch_array($resultj);
+echo '<script>';
+echo $Row['Modulocomando'];
+echo '</script>';

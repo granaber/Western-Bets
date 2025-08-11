@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="form" type="buttonTwoState" img="iconForm.gif" imgdis="iconForm_dis.gif" title="Form"/>
+	<item id="filter" type="buttonTwoState" img="iconFilter.gif" imgdis="iconFilter_dis.gif" text="Filter" selected="true"/>
+	<item id="any_word" type="buttonTwoState" text="Any Word"/>
+</toolbar>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<menu>
+	<!-- file -->
+	<item id="m1" text="Configuraciones">
+		<item id="m11" text="Banca" img="dhtmlxaccordion_icon.gif" imgdis="dhtmlxaccordion_icon.gif"><hotkey>Ctrl+B</hotkey></item>
+		<item id="m12" text="Zona" img="dhtmlxajax_icon.gif" imgdis="dhtmlxajax_icon.gif"><hotkey>Ctrl+Z</hotkey></item>
+		<item id="m17" text="Intermediario" img="intermediario.ico" imgdis="intermediario.ico"><hotkey>Ctrl+I</hotkey></item>
+		<item id="m13" text="Agencia" img="dhtmlxdataprocessor_icon.gif" imgdis="dhtmlxdataprocessor_icon.gif"><hotkey>Ctrl+A</hotkey></item>
+		<item id="m18" text="Crear Relacion" img="relacion.ico" imgdis="relacion.ico"><hotkey>Ctrl+R</hotkey></item>
+		<item id="m16" text="Usuarios" img="user.ico" imgdis="user.ico"><hotkey>Ctrl+U</hotkey></item>
+	    <item id="m20" text="Instalador (Generador de Codigo)" img="dhtmlxlayout_icon.gif" imgdis="dhtmlxlayout_icon.gif"><hotkey>Ctrl+I</hotkey></item>
+		<item id="ms1" type="separator"/>
+		<item id="m14" text="Loterias" img="dhtmlxcombo_icon.gif" imgdis="dhtmlxcombo_icon.gif"><hotkey>Ctrl+L</hotkey></item>
+		<item id="m19" text="Formatos de Loterias" img="dhtmlxcombo_icon.gif" imgdis="dhtmlxcombo_icon.gif"><hotkey>Ctrl+F</hotkey></item>
+		<item id="ms2" type="separator"/>
+		<item id="m15" text="Cupos/Limites/Porcentajes" img="dhtmlxcalendar_icon.gif" imgdis="dhtmlxcalendar_icon.gif"><hotkey>Ctrl+P</hotkey></item>
+	</item>
+	<!-- edit -->
+	<item id="m2" text="Ventas" ></item>
+		
+	<!-- features -->
+	<item id="m3" text="Premiacion"></item>
+		
+	<!-- about -->
+	<item id="m4" text="Reportes/Estadisticas">
+		<item id="m41" text="Reporte de Ventas"><hotkey>Ctrl+I</hotkey></item>
+		<item id="m42" text="Reporte de Ventas/Premios"><hotkey>F1</hotkey></item>
+		<item id="m43" text="Reporte de Punto de Venta"/>
+		<item id="m44" type="Reporte"/>
+		<item id="m45" text="Listado de Ticket(Ver Jugada)" />
+	</item>
+	<item id="m6" text="Apertura de Ventas"></item>
+	<item id="m5" text="Salir del Sistema"></item>
+</menu>
+
+<!--/*<item id="p10" text="Line Numbering" type="checkbox" checked="true" enabled="false"/>
+		<item id="p11" text="Colorize Text" type="checkbox" checked="true"/>
+		<item id="p12" text="Ignore Case" type="checkbox"><hotkey>Alt+I</hotkey></item>
+		<item id="ps1" type="separator"/>
+		<item id="p13" text="Show Popup on Errors" type="checkbox"><hotkey>Alt+P</hotkey></item>
+		<item id="ps2" type="separator"/>
+		<item id="p16" text="Font Color">
+			<item id="p61" text="Black" type="radio" group="fontcolor" checked="true"/>
+			<item id="p62" text="Brown" type="radio" group="fontcolor"/>
+			<item id="p63" text="Red" type="radio" group="fontcolor"/>
+			<item id="p64" text="Blue" type="radio" group="fontcolor"/>
+		</item>
+		<item id="p14" text="Background Color">
+			<item id="p41" text="Transparent" type="radio" group="bgcolor" checked="true"/>
+			<item id="ps3" type="separator"/>
+			<item id="p42" text="White" type="radio" group="bgcolor"/>
+			<item id="p43" text="Yellow" type="radio" group="bgcolor"/>
+			<item id="p44" text="Cyan" type="radio" group="bgcolor"/>
+			<item id="p45" text="Magenta" type="radio" group="bgcolor"/>
+			<item id="p46" text="Black" type="radio" group="bgcolor"/>
+		</item>
+		<item id="ps4" type="separator"/>
+		<item id="p15" text="End Of Line">
+			<item id="p51" text="Unix (\n)" type="radio" group="eol" checked="true" enabled="false"/>
+			<item id="p52" text="DOS/Windows (\r\n)" type="radio" group="eol" enabled="false"/>
+			<item id="p53" text="MacOS (\r)" type="radio" group="eol" enabled="false"/>
+		</item>
+		<item id="p17" text="Syntax">
+			<item id="p70" text="Ignore" type="radio" group="hlm" checked="true"/>
+			<item id="ps5" type="separator"/>
+			<item id="p71" text="HTML/JS" type="radio" group="hlm"/>
+			<item id="p72" text="PHP/ASP/JSP" type="radio" group="hlm"/>
+			<item id="p73" text="Java" type="radio" group="hlm"/>
+		</item>
+		
+	</item>*/-->

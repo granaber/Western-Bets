@@ -1,0 +1,1 @@
+[19-Mar-2015 14:52:36 America/New_York] PHP Warning:  fopen(../tmp-upload-images/) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Is a directory in /home/apuesta/public_html/php-ofc-library/ofc_upload_image.php on line 30

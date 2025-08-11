@@ -1,0 +1,24 @@
+.div-main-left{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+}
+.div-main-left::after{
+    content: url('./image/line.png');
+    position: relative;
+     left:-100px; 
+    }
+
+.badged-sport{
+    width: 90px;
+    height: 40px;
+    background:#0A2A51 ;
+    border-radius: 6px;
+}
+.badged-sport::after{
+    display: block;
+    content: "";
+     border-left: 15px solid #348FEF; 
+     border-bottom: 15px solid #0A2A51 ;
+
+}

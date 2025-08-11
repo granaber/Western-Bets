@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu><item id="m1" text="Configuraciones"><item id="m14" text="Agencia" img="dhtmlxdataprocessor_icon.gif"/><item id="m16" text="Usuarios" img="user.ico"/><item id="m17" text="Instalador (Generador de Codigo)" img="dhtmlxlayout_icon.gif"/><item id="m20" text="Cupos/Limites/Porcentajes" img="dhtmlxcalendar_icon.gif"/></item><item id="m2" text="Reportes/Estadisticas"><item id="m23" text="Reporte de Ventas" img="0"/><item id="m24" text="Listado de Ticket(Ver Jugada)" img="0"/></item><item id="m4" text="Salir del Sistema"/></menu>

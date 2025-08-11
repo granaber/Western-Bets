@@ -1,0 +1,208 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.digitaloc-header {
+	display: flex;
+	width: 100vw;
+	height: 65px;
+	background: white;
+	align-items: center;
+	box-shadow: rgb(0 0 0 / 25%) 0px 2px 3px;
+}
+
+.digitaloc-header img {
+	padding-left: 32px;
+}
+
+.digitaloc-body {
+	width: 100vw;
+	height: 100vh;
+	background: url("./HeroBackground-Option3-01.0cd4999f.png") no-repeat center
+		center fixed;
+	background-size: cover;
+	color: white;
+	padding-top: 80px;
+}
+.digitaloc-billing {
+	background: white;
+	margin: 10px 300px;
+	padding-bottom: 80px;
+}
+.digitaloc-billing h1 {
+	color: black;
+	padding-top: 40px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+.digitaloc-billing p {
+	color: black;
+	text-align: justify;
+	font-size: 18px;
+	padding: 5px 50px;
+	line-height: 24px;
+}
+.digitaloc-info h4 {
+	color: blue;
+	padding-left: 50px;
+	margin-bottom: 1px;
+}
+a:visited {
+	color: blue;
+}
+@media (max-width: 1024px) {
+	.digitaloc-billing {
+		margin: 10px 200px !important;
+	}
+}
+@media (max-width: 935px) {
+	.digitaloc-billing {
+		margin: 10px 150px !important;
+	}
+}
+@media (max-width: 810px) {
+	.digitaloc-billing {
+		margin: 10px 100px !important;
+	}
+}
+@media (max-width: 690px) {
+	.digitaloc-billing {
+		margin: 10px 30px !important;
+	}
+}
+@media (max-width: 640px) {
+	.digitaloc-body {
+		padding-top: 10px !important;
+	}
+}
+@media (max-width: 550px) {
+	.digitaloc-billing {
+		margin: 10px 10px !important;
+	}
+}
+@media (max-width: 550px) {
+	.digitaloc-billing h1 {
+		font-size: 25px;
+	}
+}
+@media (max-width: 410px) {
+	.digitaloc-billing h1 {
+		font-size: 15px;
+	}
+}

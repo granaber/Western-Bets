@@ -1,0 +1,31 @@
+{
+  "name": "angelgranadillo/public_html",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/stanley-cheung/Protobuf-PHP"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Routeguide\\": "route_guide/Routeguide/",
+      "GPBMetadata\\": [
+        "GPBMetadata/",
+        "route_guide/GPBMetadata/"
+      ],
+      "Corerq\\": "Corerq/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Angel Granadi110",
+      "email": "angelegranadillo@gmail.com"
+    }
+  ],
+  "require": {
+    "grpc/grpc": "^1.52",
+    "google/grpc-gcp": "^0.2.1",
+    "euautomation/graphql-client": "^0.3.0",
+    "stripe/stripe-php": "^15.8"
+  }
+}

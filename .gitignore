@@ -1,0 +1,22 @@
+arch/*.xml
+xml/*.xml
+
+# ignore IDE/hidden/OS cache files
+*~
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+.DS_Store
+
+/.idea/
+/composer.lock
+/.php_cs.cache
+/static/[0-9]*
+/tests/compiler.jar
+deploy.env
+error.log
+
+#/vendor/
+
+p.php
+animalitos/inserTrimpetas.sql
+publish-load

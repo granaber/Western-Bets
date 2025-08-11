@@ -1,0 +1,49 @@
+name: Deploy System BETGAMBLER 
+
+on:
+  push:
+     branches: [ production ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2
+          with:
+            submodules: true
+            fetch-depth: 0
+        - name: executing remote ssh commands using password
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.KEY }}
+            script: |
+              ssh-keygen -F github.com || ssh-keyscan github.com >> ~/.ssh/known_hosts
+              cd /home
+              if [ ! -d "github" ]; then
+                echo "Creating Directory GitHub"
+                mkdir -p github
+              fi  
+              if [ ! -d "files-publish" ]; then
+                echo "Creating Directory Files Publish"
+                mkdir -p files-publish
+                chmod 777 files-publish
+              fi
+              cd github
+              if [ ! -d "app-betgambler" ]; then
+                mkdir -p app-betgambler
+              fi
+              cp /code-betgambler/publish-load/*.* /home/files-publish/
+              cd app-betgambler
+              rm -rf betgambler
+              git clone -b production git@github.com:granaber/betgambler.git
+              cd betgambler
+              mkdir -p arch
+              chmod 777 arch
+              mkdir -p publish-load
+              chmod 777 publish-load
+              cp /home/files-publish/*.* publish-load/
+              docker compose up --build  --force-recreate  -d
+              

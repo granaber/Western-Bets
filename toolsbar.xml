@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="new" type="button" img="vermonitor.gif" imgdis="vermonitor.gif"/>
+	
+	<item id="sep01" type="separator"/>
+	
+	<item id="undo" type="button" img="mensaje.gif" imgdis="mensaje.gif" title="Undo"/>
+	
+	
+</toolbar>

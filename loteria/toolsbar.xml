@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="Banca" type="button"  img="dhtmlxaccordion_icon.gif"  title="Banca"/>
+	<item id="Zona" type="button" img="dhtmlxajax_icon.gif"  title="Zona"/>
+	
+	<item id="sep01" type="separator"/>
+	
+	<item id="Loterias" img="dhtmlxcombo_icon.gif"  type="button" title="Loterias"/>
+	<item id="Cupos" img="dhtmlxcalendar_icon.gif" type="button" title="Cupos" />
+	
+	
+</toolbar>

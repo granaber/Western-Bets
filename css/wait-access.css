@@ -1,0 +1,52 @@
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap'); */
+@font-face {
+  font-family: PT Sans Narrow;
+  src: url('../fonts/PT_Sans_Narrow/PTSansNarrow-Regular.ttf');
+}
+svg {
+  width: 100svw;
+  /* height: 100svh; */
+}
+
+#texto {
+  fill: transparent;
+}
+
+.texto {
+  font: 6em/1 PT Sans Narrow;
+  padding: 0px 3px;
+  text-transform: uppercase;
+  margin: 0;
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  animation: stroke 10s infinite linear;
+}
+
+.texto:nth-child(2) {
+  stroke: rgb(5, 63, 102);
+  animation-delay: -2s;
+}
+.texto:nth-child(3) {
+  stroke: #ffc107;
+  animation-delay: -4s;
+}
+.texto:nth-child(4) {
+  stroke: rgb(5, 63, 102);
+  animation-delay: -6s;
+}
+.texto:nth-child(5) {
+  stroke: #ffc107;
+  animation-delay: -8s;
+}
+.texto:nth-child(6) {
+  stroke: white;
+  animation-delay: -10s;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}

@@ -1,0 +1,117 @@
+* {
+  list-style: none;
+}
+
+#menucontainer {
+  position: relative;
+  height: 35px;
+  color: #ffffff;
+  background: #383636;
+  width: 100%;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+#menunav {
+  position: relative;
+  height: 28px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #fff url(images/background.jpg) repeat-x bottom left;
+  padding: 0 0 0 20px;
+}
+
+#menunav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: auto;
+  float: left;
+}
+
+#menunav ul li {
+  display: block;
+  float: left;
+  margin: 0 1px;
+}
+
+#menunav ul li a {
+  display: block;
+  float: left;
+  color: #eaf3f8;
+  text-decoration: none;
+  padding: 0 0 0 20px;
+  height: 28px;
+}
+
+#menunav ul li a span {
+  padding: 12px 20px 0 0;
+  height: 21px;
+  float: left;
+}
+
+#menunav ul li a:hover {
+  color: #fff;
+  background: transparent url(images/hover.jpg) repeat-x bottom left;
+}
+
+#menunav ul li a:hover span {
+  display: block;
+  width: auto;
+  cursor: pointer;
+}
+
+#menunav ul li a.current,
+#menunav ul li a.current:hover {
+  color: #fff;
+  background: #1d6893 url(images/left.jpg) no-repeat top left;
+  line-height: 175%;
+}
+
+#menunav ul li a.current span {
+  display: block;
+  padding: 0 20px 0 0;
+  width: auto;
+  background: #383636 url(images/right.jpg) no-repeat top right;
+  height: 38px;
+}
+
+.bg-gradient-red-ocean {
+  background: #111827;
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+.marquee {
+  position: relative;
+
+  min-height: 40px;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 8s linear infinite;
+}
+
+.content-marquee {
+  font-size: 2rem;
+  color: #eaf3f8;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

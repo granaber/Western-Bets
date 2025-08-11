@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/Roboto-Regular.ttf');
+}
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.spinner-loading {
+    margin-left: 120px;
+}
+
+.row-main-login {
+    padding-top: 120px;
+}
+
+.form-login-setting {
+    padding-bottom: 35px;
+    padding-top: 20px
+}
+.form-passw-setting{
+    padding-bottom: 10px;
+}
+
+.hab_tam {
+    width: 300px;
+    margin-left: 450px;
+}
+
+
+.conta-img-bacgr{
+    background-image: url('../media/tjugada-intro-bg.jpg');
+      /* Half height */
+    /* height: 100vh; */
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1000;
+    background-size: cover;
+    background-repeat:no-repeat;
+    /* background-size:100%; */
+    transform: scale(1.2);
+    filter:blur(1px);
+    /* Center and scale the image nicely */
+
+    animation: background_zoom 80s infinite linear;
+    animation-name: background_zoom;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@-webkit-keyframes background_zoom{
+    0% {transform:scale(1) rotate(0deg)}
+    50% {transform:scale(1.4) rotate(0.3deg)}
+    100% {transform:scale(1) rotate(0deg)}
+  }
+  
+  @keyframes background_zoom{
+    0% {transform:scale(1.2) rotate(0deg)}
+    50% {transform:scale(1.4) rotate(0.3deg)}
+    100% {transform:scale(1.2) rotate(0deg)}
+  }
+
+  .logo-tujugada-online{
+    width:70%;
+    height:60%;
+}

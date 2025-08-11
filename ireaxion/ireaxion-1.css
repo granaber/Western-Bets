@@ -1,0 +1,518 @@
+:root {
+    --color-base: #fefefe;
+    --border-base: #888;
+
+    --color-title: black;
+    --color-bg-barr: cornflowerblue;
+
+    --color-bg-btn-1: cornflowerblue;
+    --color-tx-btn-1: aliceblue;
+    --color-br-btn-1: #1b58ea;
+    --color-hv-btn-1: #1b58ea;
+    --color-hvbr-btn-1: aliceblue;
+
+    --color-bg-barra-subf: darkslategray;
+
+    --color-gray-50: #323333;
+
+    --color-font-element: rgb(57, 55, 55);
+
+
+    --color-bg-tabs: #fbf8f8;
+    --color-tx-btn-tabs: #3c3c3e;
+
+}
+
+/* The Modal (background) */
+.ireaxion-wt1 {
+    display: inline;
+    font-weight: 100 !important;
+}
+
+.ireaxion-wt2 {
+    display: inline;
+}
+
+.ireaxion-title-wt1 {
+    color: #5b5656;
+    font-weight: bold;
+}
+
+.ireaxion-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.ireaxion-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10200;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.ireaxion-modal-content {
+    background-color: var(--color-base);
+    margin: 9% auto;
+    /* 15% from the top and centered */
+    /* margin-top: 20%; */
+    padding: 20px;
+    border: 1px solid var(--border-base);
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.ireaxion-modal-content h3 {
+    text-align: center;
+    color: var(--color-title);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ireaxion-barra {
+    padding: 1px;
+    width: 100%;
+    background: var(--color-bg-barr);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 40px;
+}
+
+.ireaxion-barra-frame {
+    display: flex;
+    width: 100%;
+    background: var(--color-bg-barr);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    /* height: 40px; */
+}
+
+.ireaxion-modal-body {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    cursor: pointer;
+    color: #868117;
+}
+
+.ireaxion-btn {
+    margin-right: 1px;
+    height: 100%;
+    padding: 10px;
+    margin-right: 1px;
+    border-radius: 6px;
+    background: inherit;
+    color: var(--color-tx-btn-1);
+    border: none;
+    flex: 1 1 auto;
+    /* border: 1px solid var(--color-br-btn-1); */
+}
+
+.ireaxion-btn:hover {
+    filter: brightness(1.3);
+    /* border: 1px solid var(--color-hvbr-btn-1); */
+}
+
+.ireaxion-btn-img {
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+    margin: 0px 2px 0px 2px;
+}
+
+.ireaxion-layout {
+    display: flex;
+    height: 98%;
+    width: 100%;
+}
+
+.ireaxion-layaout-row {
+    flex-direction: row;
+}
+
+.ireaxion-layaout-col {
+    flex-direction: column;
+}
+
+.ireaxion-btn-text {
+    border: none;
+    background: transparent;
+}
+
+/* Dropdown Button */
+/* .ireaxion-dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  } */
+
+/* The container <div> - needed to position the dropdown content */
+.ireaxion-dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.ireaxion-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.ireaxion-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.ireaxion-dropdown-vinneta {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    margin: 1px;
+}
+
+/* Change color of dropdown links on hover */
+.ireaxion-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.ireaxion-dropdown:hover .ireaxion-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.ireaxion-dropdown:hover .ireaxion-btn {
+    filter: blur(1px);
+    /* border: 1px solid var(--color-hvbr-btn-1); */
+}
+
+.ireaxion-text {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+}
+
+.ireaxion-btn-spc {
+    height: 50px;
+    width: 65px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin: 2px 1px 1px 2px;
+    color: black;
+}
+
+.ireaxion-btn-spc:hover {
+    background: rgb(126, 124, 124);
+    color: #ddd;
+}
+
+.ireaxion-btn-spc h4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: inherit;
+
+}
+
+.ireaxion-btn-spc h5 {
+    font-size: 12px;
+    font-weight: 100;
+    color: inherit;
+}
+
+.ireaxion-btn-spc-2 {
+    width: 99%;
+    padding: 4px;
+    border: 1px solid black;
+    margin: 2px 1px 1px 2px;
+    border-radius: 6px;
+    color: whitesmoke;
+    height: 40px;
+    background: #133f6d;
+}
+
+.ireaxion-btn-spc-2:hover {
+    opacity: 0.6;
+}
+
+.ireaxion-btn-spc-2 h5 {
+    font-size: 15px;
+    color: inherit;
+}
+
+/* .active {
+    background: green;
+    color: white !important;
+} */
+
+.ireaxion-input-box {
+    display: flex;
+    justify-content: center;
+    /* height: 50%; */
+    width: 100%;
+}
+
+.ireaxion-class-fmr-ventas {
+    background: #f1f1f1;
+    border: 1px solid #d5d2d2;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.ireaxion-input-box div {
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+.ireaxion-input-label {
+    font-family: Inter, ui-sans-serif;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(57, 55, 55);
+}
+
+.ireaxion-input {
+    background: #F9FAFB;
+    border: 1px solid gray;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.ireaxion-subf {
+    width: 100%;
+    height: 100%;
+}
+
+.ireaxion-subf-title {
+    text-align: center;
+    width: 100%;
+    margin: 1px 0px 1px 0px;
+}
+
+.ireaxion-subf-barra-frame {
+    display: flex;
+    padding: 1px;
+    width: 100%;
+    background: var(--color-bg-barra-subf);
+    height: 40px;
+}
+
+.ireaxion-table {
+    border-collapse: collapse;
+    border-color: inherit;
+    text-indent: 0;
+}
+
+.ireaxion-grid {
+    position: relative;
+    overflow-x: auto;
+
+}
+
+.ireaxion-grid-table {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    color: var(--color-gray-50);
+}
+
+.ireaxion-grid-head {
+    background: #f9fafb;
+    color: #374151;
+    text-transform: uppercase;
+}
+
+.ireaxion-col {
+    padding: 6px 3px;
+    background: inherit;
+    color: inherit;
+}
+
+.ireaxion-tr-resal {
+    background: gainsboro !important;
+    font-weight: bold;
+}
+
+.ireaxion-tr {
+    background: white;
+    border-bottom-width: 1px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.ireaxion-tr:hover {
+    background: #f9fafb;
+}
+
+.tr-active {
+    background: yellow !important;
+}
+
+.ireaxion-row-1 {
+    padding: 6px 4px;
+    font-weight: 600;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.ireaxion-row-col {
+    padding: 6px 4px;
+}
+
+.ireaxion-bx-tabs {
+    background: var(--color-bg-tabs);
+    padding-top: 1px;
+    border: none;
+    border-radius: 6px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.ireaxion-bx-tabs h3 {
+    font-family: system-ui, 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #403b3b;
+    font-size: 20px;
+    margin: 10px 2px;
+    font-weight: 500;
+}
+
+.ireaxion-bts-tabs {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    background: inherit;
+    font-size: 13px;
+    border: none;
+    border-right: 1px solid #add1f8;
+}
+
+.ireaxion-bts-tabs h5 {
+    color: var(--color-tx-btn-tabs);
+}
+
+.ireaxion-bts-tabs:hover {
+    background: #d3d0d0;
+}
+
+.ireaxion-active-tabs {
+    position: relative;
+    background: #e3ebf7;
+    border: 1px solid #add1f8;
+    border-right: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* .ireaxion-active-tabs::after{
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -18px;
+    left: -10px;
+    right: 7px;
+    height: 16px;
+    width: 180px;
+    border-top-right-radius: 14px;
+    box-shadow: inset -11px 0px 0 0 #add1f8;
+} */
+.ireaxion-active-tabs h5 {
+    color: #285192;
+}
+
+.ireaxion-spc-grid-tabs {
+    padding: 15px;
+    background: #e3ebf7;
+    border: 1px solid #add1f8;
+    border-left: none;
+    margin-right: 10px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.ireaxion-tab-frm-title {
+
+    color: black;
+    text-align: center;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    background: #f3eee3;
+    border-right: 1px solid #add1f8;
+
+}
+
+.ireaxion-btn-extra {
+    background: gold;
+}
+
+.ireaxion-text-xs {
+    font-size: 0.75rem !important;
+    /* 12px */
+    line-height: 1rem !important;
+    /* 16px */
+}
+
+.ireaxion-text-sm {
+    font-size: 0.875rem !important;
+    /* 14px */
+    line-height: 1.25rem !important;
+    /* 20px */
+}
+
+.ireaxion-btn-secondary-grp {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    display: none;
+}
+
+.ireaxion-show-ob {
+    display: block !important;
+}
+
+.ireaxion-barra-other {
+    padding: 1px;
+    width: 100%;
+    background: #2e5177;
+    /* border-top-left-radius: 6px;
+    border-top-right-radius: 6px; */
+    /* height: 40px */
+    ;
+}

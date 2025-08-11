@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+<style type="text/css">
+<!--
+body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        font-size: 80%;
+        font-weight: bold;
+        background: #F3FAFF;
+        }
+
+ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+/* =-=-=-=-=-=-=-[Menu Eight]-=-=-=-=-=-=-=- */
+
+#menu8 {
+        width: 200px;
+        margin-top: 10px;
+        }
+
+#menu8 li a {
+        text-decoration: none;
+        height: 32px;
+          voice-family: "\"}\"";
+          voice-family: inherit;
+          height: 24px;
+        }
+
+#menu8 li a:link, #menu8 li a:visited {
+        color:#000000;
+        display: block;
+        background: url(../media/menu8.gif);
+        padding: 8px 0 0 20px;
+        }
+
+#menu8 li a:hover, #menu8 li #current {
+        color: #257EB7;
+        background: url(../media/menu8.gif) 0 -32px;
+        padding: 8px 0 0 25px;
+        }
+
+#menu8 li a:active {
+        color: #fff;
+        background: url(../media/menu8.gif) 0 -64px;
+        padding: 8px 0 0 25px;
+        }
+-->
+</style>

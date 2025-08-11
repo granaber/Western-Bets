@@ -1,0 +1,27 @@
+CometChat Change Log
+-------------------------------------------------------------
+
+1.1
+
+Feature: Custom icons feature (left-side) (unlimited)
+Feature: Auto-parsing of links
+Feature: Smileys
+Feature: Bad-word filter
+Feature: Internationalization option
+Feature: Sound alerts (user-level disable feature)
+Feature: Auto-popup of chatbox when a new message is sent
+Feature: Added various customization options (fine-tweaking)
+Feature: Number of users online
+Bug: Charset fix
+Bug: Newline character fix
+Bug: Miscellaneous fixes for IE6
+Tweaks: Miscellaneous
+
+1.0.1
+
+Bug: \' slashes bug
+Bug: Slowing of script due to large number of friends
+
+1.0.0
+
+Initial release of script

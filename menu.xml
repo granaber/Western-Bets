@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu><item id="op61" text="VENTAS"/><item id="op46" text="Cambio de Clave"/><item id="m2" text="Reportes"><item id="op64" text="Logros (Impresion)" img="dhtmlxvault_icon.gif"/><item id="op65" text="Ver Jugada" img="dhtmlxvault_icon.gif"/><item id="op69" text="Reportes Punto de Venta" img="dhtmlxvault_icon.gif"/><item id="op70" text="Resultados de Juegos" img="dhtmlxvault_icon.gif"/></item><item id="m4" text="Salir del Sistema"/></menu>

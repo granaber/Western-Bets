@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<toolbar>
+	<item id="Cerrar_"   type="button"   img="animalitos/icons/noun_1042920_cc.png"  imgdis="animalitos/icons/noun_1042920_cc.png"  text="Cerrar"  />
+	<item id="Anular_"   type="button"   img="animalitos/icons/noun_145187_cc.png"  imgdis="animalitos/icons/noun_145187_cc.png"  text="Anular Ticket"  />
+	<item id="ImpCopy_"    type="button"   img="animalitos/icons/noun_926248_cc.png"   imgdis="animalitos/icons/noun_926248_cc.png"   text="Imprimir Copia"   />
+	<item id=""   type="separator"/>
+</toolbar>

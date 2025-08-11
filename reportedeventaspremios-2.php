@@ -1,0 +1,327 @@
+<?php
+
+require('fpdf.php');
+
+class PDF extends FPDF
+{
+
+
+
+	function Header()
+	{
+		global $xpp;
+		global $tt;
+		global $ttex;
+		global $ttex2;
+		global $ttex3;
+		global $header;
+		global $w;
+		global $w1;
+
+		$this->Sety(0);
+		$this->Setx(0);
+		$this->SetFont('Arial', 'I', 7);
+		$this->text(10, 7, 'Reporte Detallado de Ventas/Premio x Hipodromo');
+		$this->text(10, 10, $ttex);
+		$this->text(10, 15, $ttex2);
+		$this->text(10, 20, $ttex3);
+		//$this->Image('logo_pb.png',10,8,33);
+
+		$this->SetFont('Arial', 'B', 7);
+
+		//***********************************
+
+		$_xp = $this->Gety();
+		$_xp = $_xp + 10;
+		$this->Sety($_xp);
+		$this->Setx($xpp);
+		$this->Cell(30, 3, 'Fecha:' . date("d/n/Y"));
+		$this->Sety($_xp + 3);
+		$this->Setx($xpp);
+		$va = $this->PageNo();
+		$this->Cell(30, 3, 'Pagina No:' . $va);
+		$this->Sety($_xp + 6);
+		$this->Setx($xpp);
+		$this->Cell(30, 3, 'Hora:' . date("g:i a"));
+		$this->rect(($xpp) - 1, 8, 39, 12, 'D');
+
+		//**********************************
+		$this->Ln();
+		$this->Ln();
+		$this->Ln();
+		$this->SetFont('Arial', 'B', 8);
+		$this->Setx(1);
+
+		for ($i = 0; $i < count($header); $i++)
+			$this->Cell($w[$i], 3, $header[$i], 1, 0, $w1[$i]);
+
+		$this->Ln();
+	}
+
+	function BasicTable($header, $w, $header2, $w2)
+	{
+		for ($i = 0; $i < count($header); $i++)
+			$this->Cell($w[$i], 3, $header[$i], 1, 0, 'C');
+
+		if (count($header2) != 0) :
+			$_xp = $this->Gety();
+
+			$this->Sety($_xp + 3);
+			$this->Setx(33);
+
+			for ($i = 0; $i < count($header2); $i++)
+				$this->Cell($w2[$i], 3, $header2[$i], 1, 0, 'C');
+
+		endif;
+
+		$this->Ln();
+	}
+
+	function registro($varlo, $w, $varlo2, $w1)
+	{
+
+		/*global $form;
+    for($i=0;$i<count($varlo);$i++)
+	  $this->Cell($w[$i],4,$varlo[$i],1,0,$w1[$i]);   
+	
+	if (count($w2)!=0):
+	   
+	endif;*/
+
+		$this->SetFont('Arial', 'B', 8);
+		$this->Setx(1);
+		$this->SetFillColor(205, 205, 205);
+		for ($i = 0; $i < count($varlo); $i++)
+			if ($varlo[$i] != 0 || $varlo[$i] != '') :
+				$this->Cell($w[$i], 4, $varlo[$i], 1, 0, $w1[$i], $fill);
+			else :
+				$this->Cell($w[$i], 4, '', 1, 0, $w1[$i], $fill);
+			endif;
+		$this->Ln();
+		$this->Setx(1);
+		for ($i = 0; $i < count($varlo2); $i++)
+			if ($varlo2[$i] != 0) :
+				$this->Cell($w[$i], 4, $varlo2[$i], 'LRB', 0, $w1[$i], 1);
+			else :
+				$this->Cell($w[$i], 4, '', 'LRB', 0, $w1[$i], 1);
+			endif;
+		$this->Ln();
+	}
+}
+
+
+
+require('prc_php.php');
+require('escruteshi.php');
+
+$GLOBALS['link'] = Connection::getInstance();
+
+$xpp = 170;
+$desdeIDCN = 0;
+$hastaIDCN = 0;
+$desde = $_REQUEST['desde'];
+$hasta = $_REQUEST['hasta'];
+$hipodromo = $_REQUEST['hipodromo'];
+$letra = $_REQUEST['letra'];
+
+
+$result = mysqli_query($GLOBALS['link'], "SELECT * FROM _tconfjornadahi where (STR_TO_DATE(Fecha,'%d/%m/%Y') BETWEEN STR_TO_DATE('" . $desde . "','%d/%m/%Y') and STR_TO_DATE('" . $hasta . "','%d/%m/%Y')) ");
+if (mysqli_num_rows($result) != 0) :
+
+	$add = ' and (';
+	$totalderegistro =	mysqli_num_rows($result);
+
+	$i = 1;
+	while ($row = mysqli_fetch_array($result)) {
+		$add .= ' _tjugadahi.IDCN=' . $row['IDCN'];
+
+		if (($totalderegistro) != $i) :
+			$add .= ' or ';
+			$i++;
+		endif;
+	}
+
+
+
+	$add .= ")";
+	$ttex = " Desde : " . $desde . " Hasta: " . $hasta;
+
+	$result = mysqli_query($GLOBALS['link'], "SELECT * FROM _hipodromoshi where _idhipo=" . $hipodromo);
+	$row = mysqli_fetch_array($result);
+
+	$ttex2 = " Hipodromo: " . $row['Descripcion'];
+	if ($letra != 'T') :
+		$add = $add . " and _tjugadahi.IDC='" . $letra . "'";
+		$ttex3 = " Letra: " . $letra;
+	endif;
+
+
+
+	$header2 = array();
+	$w2 = array();
+	$w1 = array();
+	$aa = array();
+	$bb = array();
+
+	$row = mysqli_fetch_array($result);
+
+
+	$header[0] = 'Carr/Tanda';
+	$w[0] = 16;
+	$w1[0] = 'L';
+	$w2[0] = 'L';
+	$aa[0] = 0;
+	$bb[0] = 0;
+	$aat[0] = 'TOTALES';
+	$bbt[0] = 0;
+	$header[1] = 'WIN';
+	$w[1] = 16;
+	$w1[1] = 'R';
+	$w2[1] = 'R';
+	$aa[1] = 0;
+	$bb[1] = 0;
+	$aat[1] = 0;
+	$bbt[1] = 0;
+	$header[2] = 'PLACE';
+	$w[2] = 16;
+	$w1[2] = 'R';
+	$w2[2] = 'R';
+	$aa[2] = 0;
+	$bb[2] = 0;
+	$aat[2] = 0;
+	$bbt[2] = 0;
+	$header[3] = 'SHOW';
+	$w[3] = 16;
+	$w1[3] = 'R';
+	$w2[3] = 'R';
+	$aa[4] = 0;
+	$bb[3] = 0;
+	$aat[3] = 0;
+	$bbt[3] = 0;
+	$i = 4;
+	$result = mysqli_query($GLOBALS['link'], "SELECT * FROM _tdjuegoshi where Estatus=1");
+	while ($row = mysqli_fetch_array($result)) {
+		$header[$i] = $row['Descrip'];
+		$w[$i] = 18;
+		$w1[$i] = 'R';
+		$w2[$i] = 'R';
+		$aa[$i] = 0;
+		$bb[$i] = 0;
+		$aat[$i] = 0;
+		$bbt[$i] = 0;
+		$i++;
+	}
+	$header[$i] = 'TOTALES';
+	$w[$i] = 25;
+	$w1[$i] = 'R';
+	$w2[$i] = 'L';
+	$aa[$i] = 0;
+	$bb[$i] = 0;
+	$aat[$i] = 0;
+	$bbt[$i] = 0;
+
+
+
+	$result = mysqli_query($GLOBALS['link'], "SELECT _tjugadahi.*,_tconsecionario.IDG  FROM _tjugadahi,_tconsecionario,_tconfjornadahi   where _tjugadahi.IDC=_tconsecionario.IDC    and _tjugadahi.IDCN=_tconfjornadahi.IDCN  and _tconsecionario.estatus=1 and (anulado=0 or anulado=4 or anulado=3 )  and _tconfjornadahi.IDhipo=" . $hipodromo . "  " . $add . " order by carr,IDJug,IDC,serial");
+
+	//echo ("SELECT _tjugadahi.*,_tconsecionario.IDG  FROM _tjugadahi,_tconsecionario  where _tjugadahi.IDC=_tconsecionario.IDC    and  _tconsecionario.estatus=1 and (anulado=0 or anulado=4 or anulado=3 )   ".$add." order by carr,IDJug,IDC,serial" );
+
+	$pdf = new PDF('P', 'mm', 'Legal');
+	$pdf->AddPage();
+	$pdf->SetAutoPageBreak(true);
+	$carrera = 0;
+
+	while ($row = mysqli_fetch_array($result)) {
+		if ($carrera != $row['carr']) :
+			if ($carrera != 0) :
+				$sumar1 = 0;
+				$sumar2 = 0;
+				for ($c = 1; $c <= count($aa) - 1; $c++) {
+					$sumar1 += $aa[$c];
+					$sumar2 += $bb[$c];
+				}
+				$aa[count($aa) - 1] = number_format($sumar1, 2, ',', '.');
+				$bb[count($bb) - 1] = number_format($sumar2, 2, ',', '.');
+				$aat[count($aat) - 1] += $sumar1;
+				$bbt[count($bbt) - 1] += $sumar2;
+				$pdf->registro($aa, $w, $bb, $w1);
+				for ($i = 0; $i <= count($aa) - 1; $i++) {
+					$aa[$i] = 0;
+					$bb[$i] = 0;
+				}
+			endif;
+
+			$carrera = $row['carr'];
+			$aa[0] = $carrera;
+			$bb[0] = '';
+		endif;
+
+		if ($row['IDJug'] == 0) :
+			$resultado = montojugadapremio($row['Jugada'], $row['Serial']);
+			$aa[1] += $resultado[0];
+			$bb[1] += $resultado[3];
+			$aa[2] += $resultado[1];
+			$bb[2] += $resultado[4];
+			$aa[3] += $resultado[2];
+			$bb[3] += $resultado[5];
+
+			// Total Generales ///
+
+			$aat[1] += $resultado[0];
+			$bbt[1] += $resultado[3];
+			$aat[2] += $resultado[1];
+			$bbt[2] += $resultado[4];
+			$aat[3] += $resultado[2];
+			$bbt[3] += $resultado[5];
+		else :
+			$premacion = EscrutarHI($row['Serial'], 1);
+			if (!$premacion[3]) :
+				$aa[$row['IDJug'] + 3] += $row['Valor_J'];
+				$bb[$row['IDJug'] + 3] += $premacion[1];
+
+				// Total Generales ///
+				$aat[$row['IDJug'] + 3] += $row['Valor_J'];
+				$bbt[$row['IDJug'] + 3] += $premacion[1];
+			else :
+				$result_RESTORE = mysqli_query($GLOBALS['link'], "Select * from  _tjugadahi  where Serial=" . $row['Serial']);
+				$row_Rest = mysqli_fetch_array($result_RESTORE);
+				if ($row_Rest['Anulado'] == 0 || $row_Rest['Anulado'] == 4) :
+					$aa[$row['IDJug'] + 3] += $row_Rest['Valor_J'];
+					$bb[$row['IDJug'] + 3] += $premacion[1];
+
+					// Total Generales ///
+					$aat[$row['IDJug'] + 3] += $row_Rest['Valor_J'];
+					$bbt[$row['IDJug'] + 3] += $premacion[1];
+				endif;
+			endif;
+		endif;
+	}
+	$sumar1 = 0;
+	$sumar2 = 0;
+	for ($c = 1; $c <= count($aa) - 1; $c++) {
+		$sumar1 += $aa[$c];
+		$sumar2 += $bb[$c];
+	}
+	$aa[count($aa) - 1] = number_format($sumar1, 2, ',', '.');
+	$bb[count($bb) - 1] = number_format($sumar2, 2, ',', '.');
+	$aat[count($aat) - 1] += $sumar1;
+	$bbt[count($bbt) - 1] += $sumar2;
+	$pdf->registro($aa, $w, $bb, $w1);
+
+
+	for ($c = 1; $c <= count($aa) - 1; $c++) {
+		$aat[$c] = number_format($aat[$c], 2, ',', '.');
+		$bbt[$c] = number_format($bbt[$c], 2, ',', '.');
+	}
+
+	$bbt[0] = '';
+	$pdf->registro($aat, $w, $bbt, $w1);
+
+	$pdf->Ln(10);
+	$pdf->SetFont('Arial', 'B', 4);
+	$pdf->Cell(1, 1, date("d-m-y") . " " . date("g:i a"), 1, 0, "L");
+	$pdf->Output();
+
+else :
+	echo ' NO existe la INFORMACION SOLICITADA!!';
+endif;

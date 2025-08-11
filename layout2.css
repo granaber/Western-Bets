@@ -1,0 +1,47 @@
+#main { 
+	width:980px; 
+	margin:0 auto;
+}
+#header { 
+	height:123px;
+	background:url(images/line-hor.png) repeat-x left bottom;
+}
+#header, 
+#content, 
+#footer { 
+	font-size:0.689em;
+}
+.col-1, 
+.col-2, 
+.col-3,
+.column-1,
+.column-2,
+.column-3 { 
+	float:left;
+}
+
+/*======= index.html =======*/
+#page1 #content .row-1 .col-1 { width:620px; margin-right:10px;}
+#page1 #content .row-1 .col-2 { width:320px; padding-top:3px;}
+#page1 #content .row-2 .col-1 { width:640px;}
+#page1 #content .row-2 .col-2 { width:340px;}
+#page1 #content .row-3 .column-1 { width:340px; margin-right:10px;}
+#page1 #content .row-3 .column-2 { width:340px; margin-right:20px;}
+#page1 #content .row-3 .column-3 { width:270px;}
+
+/*======= index-1.html =======*/
+#page2 #content .row-1 .col-1 { width:640px;}
+#page2 #content .row-1 .col-2 { width:340px;}
+#page2 #content .row-2 .column-1 { width:630px; margin-right:10px;}
+#page2 #content .row-2 .column-1 .column-1 { width:272px; margin-right:36px;}
+#page2 #content .row-2 .column-1 .column-2 { width:272px;}
+#page2 #content .row-2 .column-2 { width:340px;}
+
+
+/*=========================*/
+
+
+#footer { 
+	height:86px;
+	background:url(images/line-hor.png) repeat-x left top;
+}

@@ -1,0 +1,37 @@
+/* the news box */
+#news
+{
+	width:210px;
+	background: #000000;
+}
+#news a
+{
+	color: #FFFFFF;
+	text-align:center
+  
+}
+#news ul
+{
+	margin:0 .5em 0 1em;
+	padding:0;
+}
+#news li{
+	color: #66CCFF;
+	line-height:2em;
+}
+/* the news box when JavaScript is available */
+#news.hasJS
+{
+	height:70px;
+	overflow:hidden;
+	position:relative;
+}
+/* The nested UL when JavaScript is available */
+#news.hasJS ul
+{
+	position:absolute;
+	top:120px;
+	left:0;
+	margin:0 .5em 0 .5em;
+	padding:0;
+}

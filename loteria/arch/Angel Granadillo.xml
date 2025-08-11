@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu><item id="m21" text="Ventas"/><item id="m25" text="Apertura de Ventas"/><item id="m1" text="Reportes/Estadisticas"><item id="m23" text="Reporte de Ventas" img="0"/><item id="m24" text="Listado de Ticket(Ver Jugada)" img="0"/></item><item id="m4" text="Salir del Sistema"/></menu>

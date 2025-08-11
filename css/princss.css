@@ -1,0 +1,353 @@
+@charset "utf-8";
+/* CSS Document */
+
+<!--
+.Estilo2inicio {font-size: 12px; color:#FFFFFF}
+.Estilo4inicio {color: #FFFFFF}
+.Estilo5 {color: #FFFFFF; font-size: 9px; }
+.Estilo6 {color: #333333}
+div#box11{padding: 10px;margin:0 auto;
+    background:#0066CC;color:#000}	
+div#box12{padding: 10px;margin:0 auto;
+    background: #666666;color:#000}	
+	
+
+
+.Estilo6 {color: #FFFFFF}
+
+.glossymenu{
+	position: relative;
+	padding: 0 0 0 34px;
+	margin: 0 auto 0 auto;
+	background: url(media/menub_bg.gif) repeat-x; /*tab background image path*/
+	height: 46px;
+	list-style: none;
+}
+
+.glossymenu li{
+	float:left;
+}
+
+.glossymenu li a{
+	float: left;
+	display: block;
+	color:#000;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	padding:0 0 0 16px; /*Padding to accomodate left tab image. Do not change*/
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	cursor: pointer;	
+}
+
+.glossymenu li a b{
+	float: left;
+	display: block;
+	padding: 0 24px 0 8px; /*Padding of menu items*/
+}
+
+.glossymenu li.current a, .glossymenu li a:hover{
+	color: #fff;
+	background: url(media/menub_hover_left.gif) no-repeat; /*left tab image path*/
+	background-position: left;
+}
+
+.glossymenu li.current a b, .glossymenu li a:hover b{
+	color: #fff;
+	background: url(media/menub_hover_right.gif) no-repeat right top; /*right tab image path*/
+}
+
+#info {height:500px; position:relative;}
+#adsie {position:absolute; bottom:0;}
+.arrowlistmenu{
+width: 180px; 
+}
+
+.arrowlistmenu .headerbar{
+font: bold 14px Arial;
+color: white;
+background: black url(media/titlebar.png) repeat-x center left;
+margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+text-transform: uppercase;
+padding: 4px 0 4px 10px; /*header text is indented 10px*/
+}
+
+.arrowlistmenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+
+.arrowlistmenu ul li{
+padding-bottom: 2px; /*bottom spacing between menu items*/
+}
+
+.arrowlistmenu ul li a{
+color: #A70303;
+background: url(media/arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+display: block;
+padding: 2px 0;
+padding-left: 19px; /*link text is indented 19px*/
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid #dadada;
+font-size: 90%;
+}
+
+.arrowlistmenu ul li a:visited{
+color: #A70303;
+}
+
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+color: #A70303;
+background-color: #F3F3F3;
+}
+.Estilo6 {color: #FFFFFF}
+.EstiloCC {color: #FFFFFF}
+/*Hoja estilo*/
+
+.curlycontainer{
+border: 1px solid #b8b8b8;
+margin-bottom: 1em;
+width: 300px;
+}
+
+.curlycontainer .innerdiv{
+background: transparent url(media/brcorner.gif) bottom right no-repeat;
+position: relative;
+left: 2px;
+top: 2px;
+padding: 1px 4px 15px 5px;
+}
+
+.shiftcontainer{
+position: relative;
+left: 5px; /*Number should match -left shadow depth below*/
+top: 5px; /*Number should match -top shadow depth below*/
+}
+
+.shadowcon_x{
+width: 425px; /* container width*/
+background-color: #d1cfd0;
+}
+
+.shadowcon_x .innerdiv{
+/* Add container height here if desired */
+background-color: white;
+border: 1px solid gray;
+padding: 6px;
+position: relative;
+left: -5px; /*shadow depth*/
+top: -5px; /*shadow depth*/
+}
+
+.shadowcontainer{
+width: 240px; /* container width*/
+background-color: #d1cfd0;
+}
+
+.shadowcontainer .innerdiv{
+/* Add container height here if desired */
+background-color: white;
+border: 1px solid gray;
+padding: 6px;
+position: relative;
+left: -5px; /*shadow depth*/
+top: -5px; /*shadow depth*/
+}
+.Estilo_ticket {font-size: 16px}
+.EstiloTT {font-size: 16px}
+.Estilolg1 {font-size: 14px}
+.Estilolg {font-size: 12px; color:#FFFFFF}
+/* TOOLTIP */
+#xTooltip {
+  position:absolute; visibility:hidden;
+}
+.tip1 {
+  color:#666; border-bottom:1px dashed #ccc;
+}
+.tip2 {
+  color:#66f; border-bottom:1px dashed #ccf;
+}
+
+.xtip1 {
+  position:absolute; visibility:hidden; overflow:hidden;
+  color:#000; background:#ccc; border:1px solid #666;
+  font-size:10px; margin:0; padding:1px;
+  width:180px; height:14px;
+}
+.xtip2 {
+  position:absolute; visibility:hidden; overflow:hidden;
+  color:#008; background:#ccf; border:1px solid #008;
+  font-size:10px; margin:0; padding:1px;
+  width:180px; height:42px;
+}
+.xtip3 {
+  position:absolute; visibility:hidden; overflow:hidden;
+  color:#800; background:#fcc; border:1px solid #800;
+  font-size:10px; margin:0; padding:1px;
+  width:180px; height:14px;
+}
+
+bodyx {
+ font:normal 76% georgia,helvetica,verdana,tahoma,arial,"sans serif";
+}
+
+.dialogx {
+ width:67%;
+ margin:0px;
+ min-width:20em;
+ max-width:350px; /* I only cut the left background images out to 800px. You could do much larger, etc. */
+ color:#000;
+}
+
+.dialogx .hdx .cx,
+.dialogx .ftx .cx{
+ font-size:1px; /* ensure minimum height */
+ height:11px;
+}
+
+.dialogx .ftx .cx {
+ height:14px;
+}
+
+.dialogx .hdx {
+ background:transparent url(media/tl.png) no-repeat 0px 0px;
+ margin-right:14px; /* space for right corner */
+}
+
+.dialogx .hdx .cx {
+ background:transparent url(media/tr.png) no-repeat right 0px;
+ margin-right:-14px; /* pull right corner back over "empty" space (from above margin) */
+}
+
+.dialogx .bdx {
+ background:transparent url(media/ml.png) repeat-y 0px 0px;
+ margin-right:6px;
+}
+
+.dialogx .bdx .cx {
+ background:transparent url(media/mr.png) repeat-y right 0px;
+ margin-right:-6px;
+}
+
+.dialogx .bdx .cx .sx {
+ margin:0px 8px 0px 4px;
+ background: url(media/ms.jpg) repeat-x 0px 0px;
+ padding:1em;
+}
+
+.dialogx .ftx {
+ background:transparent url(media/bl.png) no-repeat 0px 0px;
+ margin-right:14px;
+}
+
+.dialogx .ftx .cx {
+ background:transparent url(media/br.png) no-repeat right 0px;
+ margin-right:-14px;
+}
+
+/* content-specific */
+
+.dialogx h1x {
+ /* header */
+ font-size:2em;
+ margin:0px;
+ padding:0px;
+ margin-top:-0.6em;
+}
+
+px {
+ font-family:verdana,tahoma,arial,"sans serif";
+}
+
+.dialogx px {
+ margin:0.5em 0px 0px 0px;
+ padding:0px;
+ font:0.95em/1.5em arial,tahoma,"sans serif";
+}
+
+html>body .dialogx prex {
+ font-size:1.1em;
+}
+
+
+
+.shadowcontainerx2{
+width: 250px; /* container width*/
+background-color: #d1cfd0;
+}
+
+.shadowcontainerx2 .innerdivx2{
+/* Add container height here if desired */
+background-color: white;
+border: 1px solid gray;
+padding: 6px;
+
+}
+div#box{padding: 10px;margin:0 auto;color:#000}
+div#box1{padding: 10px;margin:0 auto;color:#000}		
+div#box2{padding: 10px;margin:0 auto;color:#000}	
+div#box3{padding: 10px;margin:0 auto;color:#000}	
+div#meumar{padding: 10px;margin:0 auto;
+    background: #006699 ;color:#000}	
+div#box4{
+    /* padding: 10px; */
+    /* margin:0 auto; */
+    /* background: #006699; */
+    /* color:#000; */
+    }		
+div#box5{padding: 10px;margin:0 auto;
+    background: #006699 ;color:#000}	
+div#box6{padding: 10px;margin:0 auto;
+    background: #666666 ;color:#000}	
+		
+div#box7{padding: 10px;margin:0 auto;
+    background: #999999;color:#000}	
+div#box8{padding: 10px;margin:0 auto;
+    background: #666666 ;color:#000}
+
+div#box9{padding: 10px;margin:0 auto;
+    background: #CCCCCC ;color:#000}
+	
+div#box10{padding: 10px;margin:0 auto;
+    background: #CCCCCC ;color:#000}	
+div#box12{padding: 10px;margin:0 auto;
+    background: #333333 ;color:#000}	
+div#box14{padding: 10px;margin:0 auto;
+    background: #666666 ;color: #FFFFFF}		
+div#box15{padding: 10px;margin:0 auto;
+    background: #FFFFFF;color: #FFFFFF}			
+.resal {background:#FFFF99; color:#000000}
+.resal {color:#000000; font-weight:bold; font-size:15px;  font-family: Arial, Helvetica, sans-serif}
+.resal2 {background:#006699 ; color:#000000}
+.resal2 {color:#000000; font-weight:bold; font-size:15px;  font-family: Arial, Helvetica, sans-serif}
+.resal3 {background: #666666 ; color: #000000}
+.resal3 {color:#000000; font-weight:bold; font-size:15px;  font-family: Arial, Helvetica, sans-serif}
+.nom1  {background:#666666; color:#FFFFFF}
+.nom2  {background:#999999; color:#FFFFFF}	
+.nom3  {background:#006699; color:#FFFFFF}
+.nom4  {background:#0099FF; color:#FFFFFF}	
+div#boxc1{padding: 10px;margin:0 auto;color:#000}		
+div#boxc2{padding: 10px;margin:0 auto;color:#000}	
+div#boxc3{padding: 10px;margin:0 auto;color:#000}	
+div#boxc4{padding: 10px;margin:0 auto;color:#000}	
+div#boxc5{padding: 10px;margin:0 auto;color:#000}	
+div#boxc6{padding: 10px;margin:0 auto;color:#000}	
+div#boxc7{padding: 10px;margin:0 auto;color:#000}	
+div#boxc8{padding: 10px;margin:0 auto;color:#000}	
+		
+@media print {
+	     
+    .header{display:none} 
+	div,a {display:none}
+	img {display:none}
+	span {display:none}
+	
+}		
+
+

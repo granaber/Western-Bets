@@ -1,0 +1,40 @@
+#main {width:990px; margin:0 auto; text-align:left; background:#111;}
+#main_inner { padding:0 20px 23px 20px;}
+
+#header {height:280px;}
+#header, #content, #footer { font-size:.69em;}
+
+.col_1, .col_2, .col_3, .column1, .column2, .column3, .column4 { float:left;}
+
+/*======= index.html =======*/
+#page1 #content .col_1 {width:233px;}
+#page1 #content .col_2 { width:494px;}
+#page1 #content .col_3 { width:223px;}
+
+#page1 #content .col_1 .block .column1 { width:51px; text-align:right; padding:2px 0 2px 0;}
+#page1 #content .col_1 .block .column2 { width:48px; text-align:right; padding:2px 0 2px 0;}
+#page1 #content .col_1 .block .column3 { width:88px; text-align:center; padding:2px 0 2px 0;}
+#page1 #content .col_1 .block .column4 { width:32px; padding:2px 0 2px 0;}
+#page1 #content .col_1 .block1 .column1 { width:94px;}
+#page1 #content .col_1 .block1 .column2 { width:87px; margin-bottom:15px;}
+#page1 #content .col_1 .block1 .column3 { width:65px;}
+#page1 #content .col_1 .block1 .column4 { width:116px;}
+
+#page1 #content .col_2 .column1 { width:247px;}
+#page1 #content .col_2 .column2 { width:237px;}
+
+/*======= index-1.html =======*/
+#page2 #content .row_1 .col_1 {width:463px;}
+#page2 #content .row_1 .col_2 { width:487px;}
+#page2 #content .row_2 .col_1 {width:233px;}
+#page2 #content .row_2 .col_2 { width:494px;}
+#page2 #content .row_2 .col_3 { width:223px;}
+
+#page2 #content .row_1 .col_1 .column1 { width:188px;}
+#page2 #content .row_1 .col_1 .column2 { width:227px;}
+
+
+/*=========================*/
+
+
+#footer {height:52px;}

@@ -1,0 +1,19 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.add-dark {
+    background-color: #14131a !important;
+    border: none !important;
+}
+
+.layout-dark {
+    background-color: black !important;
+    backdrop-filter: saturate(200%) blur(6px);
+}
+
+.bg-menu-theme-dark {
+    background-color: #14131a !important;
+    color: #697a8d;
+}
