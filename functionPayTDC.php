@@ -16,11 +16,11 @@ define('HOST_PRODUCTION', 'https://westernbets.pro');
 define('HOST_DEVELOMENT', 'http://localhost:5200');
 
 // API TEST
-// define("stripeSecretKey", "sk_test_51EkZkZAxMaD5AMhFi2ZpubvcEjSxDbn0PicmvY7fzxsfMvklLKnZZGGKYWEskr2dVBfJuj9iYuGSYtgnFCQ9vlCU00uOwXwKIx");
+// define("sc", "sk_test_51EkZkZAxMaD5AMhFi2ZpubvcEjSxDbn0PicmvY7fzxsfMvklLKnZZGGKYWEskr2dVBfJuj9iYuGSYtgnFCQ9vlCU00uOwXwKIx");
 // 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
 
 // API PRODUCTION
-define("stripeSecretKey", "null");
+define("sc", "null");
 
 
 define("CODE_OK", 0);
@@ -56,7 +56,7 @@ function handlePay($Items, $code_user, $idb,  $registre = true)
 
     global $CODE_FOR_STATUS, $CODE_FOR_STATUS_RECARD,  $PRODUCCION;
 
-    $stripe = new \Stripe\StripeClient(stripeSecretKey);
+    $stripe = new \Stripe\StripeClient(sc);
     $monto = 0;
     $line_items = [];
     //prod_QtOYRpij12unZp
@@ -112,7 +112,7 @@ function searchPrice($price)
 {
     $base = 100;
     $mont = $price * $base;
-    $stripe = new \Stripe\StripeClient(stripeSecretKey);
+    $stripe = new \Stripe\StripeClient(sc);
     $search = $stripe->prices->all(['limit' => 50]);
     $data = $search->data;
     $id = 'none';
@@ -137,7 +137,7 @@ function searchPrice($price)
 }
 function searchOrderIdPayLinks($orderId)
 {
-    $stripe = new \Stripe\StripeClient(stripeSecretKey);
+    $stripe = new \Stripe\StripeClient(sc);
     $search = $stripe->paymentLinks->all(['limit' => 3]);
     $data = $search->data;
     foreach ($data as $key => $value) {
@@ -154,7 +154,7 @@ function disablePaayLinks($orderId)
 {
     $idPl = searchOrderIdPayLinks($orderId);
     if ($idPl != 'none') {
-        $stripe = new \Stripe\StripeClient(stripeSecretKey);
+        $stripe = new \Stripe\StripeClient(sc);
         $stripe->paymentLinks->update(
             $idPl,
             ['active' => false]
@@ -166,7 +166,7 @@ function test()
     $base = 100;
     $price = 20;
     $orderId = 70;
-    $stripe = new \Stripe\StripeClient(stripeSecretKey);
+    $stripe = new \Stripe\StripeClient(sc);
     $search = $stripe->checkout->sessions->all(['limit' => 3]);
     // $search = $stripe->paymentLinks->all(['limit' => 3]);
 
@@ -197,7 +197,7 @@ function handleCheckTranss($comprobante, $session_id, $idb)
 {
     $base = ["codetranss" => $comprobante, "token" => $session_id];
 
-    $stripe = new \Stripe\StripeClient(stripeSecretKey);
+    $stripe = new \Stripe\StripeClient(sc);
     $session = $stripe->checkout->sessions->retrieve($session_id);
     // $customer = $stripe->customers->retrieve($session->customer);
 

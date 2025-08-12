@@ -1,4 +1,4 @@
-name: Deploy System BETGAMBLER 
+name: Deploy System Western Bets 
 
 on:
   push:
@@ -32,14 +32,14 @@ jobs:
                 chmod 777 files-publish
               fi
               cd github
-              if [ ! -d "app-betgambler" ]; then
-                mkdir -p app-betgambler
+              if [ ! -d "app-westernbets" ]; then
+                mkdir -p app-westernbets
               fi
-              cp /code-betgambler/publish-load/*.* /home/files-publish/
-              cd app-betgambler
-              rm -rf betgambler
-              git clone -b production git@github.com:granaber/betgambler.git
-              cd betgambler
+              cp /code-westernbets/publish-load/*.* /home/files-publish/
+              cd app-westernbets
+              rm -rf Western-Bets
+              git clone -b production git@github.com:granaber/Western-Bets.git
+              cd Western-Bets
               mkdir -p arch
               chmod 777 arch
               mkdir -p publish-load
