@@ -1523,7 +1523,7 @@ $TYPE_SALDO = 3;
 $TYPE_REVERSO = 5;
 $TYPE_PREMIO_REVERSO = 5;
 $MSG_NO_AVALIBLE_CREDIT = 'No tiene credito DISPONIBLE';
-$token = 'w8D3rTzCrxw968OhtanyMdOUC9AMYe3L';
+$token = 'eizah7pie3zeiboa0ies2go8doogiesohRea9jee';
 $API_REST = $mode == $MODE_PRODUCTION ?  'https://credito.betgambler.net:3145' : 'http://localhost:3145';
 
 function BackendCredito($IDC, $Serial, $Monto, $Tipo, $deb)

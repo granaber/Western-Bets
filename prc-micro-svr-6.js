@@ -1,4 +1,4 @@
-var tocketAmericana = 'w8D3rTzCrxw968OhtanyMdOUC9AMYe3L'
+var tocketAmericana = 'eizah7pie3zeiboa0ies2go8doogiesohRea9jee'
 const TEXT_CREDITO = 'credito'
 localStorage.setItem('toket_credit', tocketAmericana)
 const configaxion = {

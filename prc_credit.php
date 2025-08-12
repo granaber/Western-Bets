@@ -8,7 +8,7 @@ $TYPE_REVERSO = 5;
 $TYPE_PREMIO_REVERSO = 5;
 
 $MSG_NO_AVALIBLE_CREDIT = 'No tiene credito DISPONIBLE';
-$tokenAPICREDIT = 'w8D3rTzCrxw968OhtanyMdOUC9AMYe3L';
+$tokenAPICREDIT = 'eizah7pie3zeiboa0ies2go8doogiesohRea9jee';
 // $API_REST = 'https://credito.betgambler.net:3145';
 
 $API_REST = $mode == $PRODUCCION ?  'https://credito.betgambler.net:3145' : 'http://localhost:3145';
