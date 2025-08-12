@@ -3,11 +3,11 @@ services:
     php-fpm:
         build: phpdocker/php-fpm
         restart: 'always'
-        working_dir: /code-betgambler
+        working_dir: /code-westernbets
         ports:
             - '6001:9000'
         volumes:
-            - .:/code-betgambler
+            - .:/code-westernbets
             - './publish-load:/home/files-publish'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
             - './phpdocker/php-fpm/www.conf:/etc/php/8.2/fpm/pool.d/www.conf'
