@@ -5,7 +5,7 @@ services:
         restart: 'always'
         working_dir: /code-betgambler
         ports:
-            - '4001:9000'
+            - '6001:9000'
         volumes:
             - .:/code-betgambler
             - './publish-load:/home/files-publish'
