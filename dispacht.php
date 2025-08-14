@@ -4,7 +4,7 @@ require('graphql.php');
 function dispatch($mode)
 {
 	global $PRODUCCION;
-	$endpointf = $mode == $PRODUCCION ? "https://ventas.westernbets.pro:4433/apply" : "http://localhost:8080/apply"; //
+	$endpointf = $mode == $PRODUCCION ? "https://ventas.westernbets.pro:4434/apply" : "http://localhost:8080/apply"; //
 	$query3 = <<<'GRAPHQL'
      {
 		ListIDPClose{
