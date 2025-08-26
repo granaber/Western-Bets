@@ -16,7 +16,7 @@ $db = $mode == $MODE_PRODUCTION ? 'animalitos_westernbets' : 'animalitos_western
 $serverD =  $mode == $MODE_PRODUCTION ? '10.136.242.179' : '127.0.0.1:1653'; //zuloteria.db.5144062.hostedresource.com;localhost
 $userD = $mode == $MODE_PRODUCTION ? 'westernbets_root' : 'root'; //root; bancala_loteria
 $clvD = $mode == $MODE_PRODUCTION ? '8I#q}*7sGWC]' : 'H4W29ZoGSxKU'; //Legna113;intra
-$dbD =  $mode == $MODE_PRODUCTION ? 'amerinca_westernbets' : 'amerinca_westernbets'; //bancala_loteria; lotery
+$dbD =  $mode == $MODE_PRODUCTION ? 'parlay_westernbets' : 'parlay_westernbets'; //bancala_loteria; lotery
 ///////////////////////////////////////////////
 /////// Datos del Server de Americanas ///////////
 $serverA = '74.217.31.36'; //zuloteria.db.5144062.hostedresource.com;localhost
