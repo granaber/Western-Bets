@@ -41,7 +41,7 @@ $port = ($mode == $PRODUCCION) ? 3306 : 1653; //
 
 //amerbet_root:muf5iThic2*1@10.136.242.179/amerinca_betgambler
 $serverAME = ($mode == $PRODUCCION) ? '10.136.242.179' : '127.0.0.1:1653'; //; //;  //'159.89.93.31'
-$userAME = ($mode == $PRODUCCION) ? "amerweste_root" : 'root'; //"root";
+$userAME = ($mode == $PRODUCCION) ? "amerwester_root" : 'root'; //"root";
 $clvAME = ($mode == $PRODUCCION) ? 'muf5iThic2*1' : 'H4W29ZoGSxKU'; //intra//
 $dbAME =  ($mode == $PRODUCCION) ? "amerinca_westernbets" : "amerinca_westernbets"; //
 $portAME = ($mode == $PRODUCCION) ? 3306 : 1653; //
